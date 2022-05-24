@@ -12,17 +12,20 @@
       }
 
       .box {
-        width: calc(120px + 50px);
+        width: calc(100%);
         height: 120px;
         background: rgb(181, 20, 20);
       }
-      a::after {
+      .box::after {
+        content: attr(data-title);
+      }
+      a::before {
         content: "(" attr(href) ")";
       }
     </style>
   </head>
   <body>
-    <div class="box"></div>
+    <div class="box" data-title="Day la box mau hong!"></div>
     <a href="https://fullstack.edu.vn">Học lập trình</a>
     <h1>CSS Function</h1>
     <ul>
